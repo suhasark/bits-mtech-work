@@ -1,3 +1,8 @@
+// Author : Suhasa R K
+// Change Log :
+// 3rd Sep 2023: First Version
+// 9th Sep 2023: Final Version
+
 Algorithm push(s, o):
 if top = N then
     indicate that a stack-full error has occurred
@@ -36,8 +41,8 @@ return e
 
 Algorithm findhighestscorer(N, Names, Marks):
 for i ← 1 to N do
-    push(s,Names[i]) //s is a stack
-    enqueue(q1,Marks[i]) //q1 is a queue
+    push(s,Marks[i]) //s is a stack
+    enqueue(q1,Names[i]) //q1 is a queue
 
 // The logic to solve this problem is to ensure that scores (stack s) and scorers(queue q1) can be retreived in the same order. To achieve this we need to reverse the elements of the stack s and the retreive 
 // elements from s & q1. The steps are summarized below :

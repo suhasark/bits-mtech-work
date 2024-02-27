@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-02-27T15:53:13.282Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="8VQVnuEfNfjOBzbv5ZuI" version="23.1.7" type="github" pages="7">
+<mxfile host="app.diagrams.net" modified="2024-02-27T16:04:42.461Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="M07cC930hzaYzVKWgr98" version="23.1.7" type="github" pages="7">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Entity Diagram">
     <mxGraphModel dx="2284" dy="738" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="1" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
@@ -2639,6 +2639,85 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="yKLKe8ShDogGAGZ2efDo-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="yKLKe8ShDogGAGZ2efDo-1" target="yKLKe8ShDogGAGZ2efDo-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yKLKe8ShDogGAGZ2efDo-6" value="Receives Status" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];sketch=1;hachureGap=4;jiggle=2;curveFitting=1;" vertex="1" connectable="0" parent="yKLKe8ShDogGAGZ2efDo-4">
+          <mxGeometry x="0.4074" y="-22" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yKLKe8ShDogGAGZ2efDo-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;curved=1;" edge="1" parent="1" source="yKLKe8ShDogGAGZ2efDo-1" target="yKLKe8ShDogGAGZ2efDo-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yKLKe8ShDogGAGZ2efDo-17" value="Acquired &lt;br&gt;Transactions" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];sketch=1;hachureGap=4;jiggle=2;curveFitting=1;" vertex="1" connectable="0" parent="yKLKe8ShDogGAGZ2efDo-16">
+          <mxGeometry x="-0.2647" y="-33" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yKLKe8ShDogGAGZ2efDo-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="yKLKe8ShDogGAGZ2efDo-1" target="yKLKe8ShDogGAGZ2efDo-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yKLKe8ShDogGAGZ2efDo-21" value="Instruction to &lt;br&gt;send money" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];sketch=1;hachureGap=4;jiggle=2;curveFitting=1;" vertex="1" connectable="0" parent="yKLKe8ShDogGAGZ2efDo-18">
+          <mxGeometry x="-0.1264" y="4" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yKLKe8ShDogGAGZ2efDo-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="yKLKe8ShDogGAGZ2efDo-1" target="yKLKe8ShDogGAGZ2efDo-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yKLKe8ShDogGAGZ2efDo-20" value="State&amp;nbsp;&lt;br&gt;Transitions" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];sketch=1;hachureGap=4;jiggle=2;curveFitting=1;" vertex="1" connectable="0" parent="yKLKe8ShDogGAGZ2efDo-19">
+          <mxGeometry x="-0.0438" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yKLKe8ShDogGAGZ2efDo-1" value="&lt;font style=&quot;font-size: 23px;&quot;&gt;&lt;b&gt;CBPS&lt;/b&gt;&lt;/font&gt;" style="ellipse;shape=doubleEllipse;whiteSpace=wrap;html=1;aspect=fixed;hachureGap=4;" vertex="1" parent="1">
+          <mxGeometry x="330" y="290" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="yKLKe8ShDogGAGZ2efDo-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;orthogonalLoop=1;jettySize=auto;html=1;curved=1;" edge="1" parent="1" source="yKLKe8ShDogGAGZ2efDo-2" target="yKLKe8ShDogGAGZ2efDo-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yKLKe8ShDogGAGZ2efDo-5" value="Sends Money" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];sketch=1;hachureGap=4;jiggle=2;curveFitting=1;" vertex="1" connectable="0" parent="yKLKe8ShDogGAGZ2efDo-3">
+          <mxGeometry x="-0.264" y="-11" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yKLKe8ShDogGAGZ2efDo-2" value="Clients/Merchants" style="shape=ext;double=1;rounded=1;whiteSpace=wrap;html=1;hachureGap=4;" vertex="1" parent="1">
+          <mxGeometry x="130" y="150" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="yKLKe8ShDogGAGZ2efDo-7" value="Banking Partner" style="shape=ext;double=1;rounded=1;whiteSpace=wrap;html=1;hachureGap=4;" vertex="1" parent="1">
+          <mxGeometry x="590" y="150" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="yKLKe8ShDogGAGZ2efDo-8" value="Operations" style="shape=ext;double=1;rounded=1;whiteSpace=wrap;html=1;hachureGap=4;" vertex="1" parent="1">
+          <mxGeometry x="130" y="520" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="yKLKe8ShDogGAGZ2efDo-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="yKLKe8ShDogGAGZ2efDo-9" target="yKLKe8ShDogGAGZ2efDo-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yKLKe8ShDogGAGZ2efDo-15" value="Money Laundering,&lt;br&gt;Screening checks &lt;br&gt;&amp;amp; Approval/Rejection" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];sketch=1;hachureGap=4;jiggle=2;curveFitting=1;" vertex="1" connectable="0" parent="yKLKe8ShDogGAGZ2efDo-14">
+          <mxGeometry x="0.0529" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yKLKe8ShDogGAGZ2efDo-9" value="Compliance" style="shape=ext;double=1;rounded=1;whiteSpace=wrap;html=1;hachureGap=4;" vertex="1" parent="1">
+          <mxGeometry x="590" y="520" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="yKLKe8ShDogGAGZ2efDo-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=-0.007;entryY=0.65;entryDx=0;entryDy=0;curved=1;entryPerimeter=0;" edge="1" parent="1" source="yKLKe8ShDogGAGZ2efDo-8" target="yKLKe8ShDogGAGZ2efDo-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yKLKe8ShDogGAGZ2efDo-13" value="Issue &amp;amp; System&amp;nbsp;&lt;br&gt;management&amp;nbsp;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];sketch=1;hachureGap=4;jiggle=2;curveFitting=1;" vertex="1" connectable="0" parent="yKLKe8ShDogGAGZ2efDo-11">
+          <mxGeometry x="0.2877" y="-24" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yKLKe8ShDogGAGZ2efDo-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.993;entryY=0.35;entryDx=0;entryDy=0;entryPerimeter=0;curved=1;" edge="1" parent="1" source="yKLKe8ShDogGAGZ2efDo-7" target="yKLKe8ShDogGAGZ2efDo-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yKLKe8ShDogGAGZ2efDo-23" value="Status of&lt;br&gt;Transfer" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];sketch=1;hachureGap=4;jiggle=2;curveFitting=1;" vertex="1" connectable="0" parent="yKLKe8ShDogGAGZ2efDo-22">
+          <mxGeometry x="0.0001" y="-33" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>

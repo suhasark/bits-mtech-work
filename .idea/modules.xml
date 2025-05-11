@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/bits-mtech-work.iml" filepath="$PROJECT_DIR$/.idea/bits-mtech-work.iml" />
+      <module fileurl="file://$PROJECT_DIR$/reliability-dimension-predictor/reliability-dimension-predictor.iml" filepath="$PROJECT_DIR$/reliability-dimension-predictor/reliability-dimension-predictor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/speed-dimension-predictor/speed-dimension-predictor.iml" filepath="$PROJECT_DIR$/speed-dimension-predictor/speed-dimension-predictor.iml" />
     </modules>
   </component>
 </project>

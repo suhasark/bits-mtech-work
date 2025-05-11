@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Network Route Optimizer</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e0f7fa; /* Light cyan background */
+            margin: 20px;
+            color: #37474f; /* Dark grayish blue text */
+            line-height: 1.7; /* Slightly increased line height for better readability */
+            font-size: 18px; /* Increased base font size */
+        }
+        .container {
+            max-width: 1600px;
+            margin: 30px auto;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 150, 136, 0.1); /* Teal shadow */
+        }
+        h1 {
+            color: #00897b; /* Teal heading */
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.8em; /* Slightly larger heading */
+            font-weight: bold;
+        }
+        .input-group {
+            margin-bottom: 28px; /* Increased margin for input groups */
+        }
+        label {
+            display: block;
+            color: #26a69a; /* Teal label */
+            margin-bottom: 12px; /* Increased margin for labels */
+            font-weight: bold;
+            font-size: 1.1em; /* Slightly larger label text */
+        }
+        input[type="text"], button {
+            padding: 16px; /* Increased padding for inputs and buttons */
+            border: 1px solid #b2dfdb; /* Light teal border */
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 18px; /* Increased font size for inputs and buttons */
+            width: calc(100% - 26px);
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #00acc1; /* Cyan focus */
+            box-shadow: 0 0 0 0.2rem rgba(0, 188, 212, 0.25);
+        }
+        button {
+            background-color: #00897b; /* Teal button */
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.15s ease-in-out;
+            width: 200px; /* Slightly wider button */
+            margin-top: 35px; /* Increased margin for button */
+            border-radius: 8px;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #00695c; /* Darker teal hover */
+        }
+        h2 {
+            color: #00897b; /* Teal response heading */
+            margin-top: 55px; /* Increased margin for response heading */
+            border-bottom: 2px solid #80cbc4; /* Light teal border */
+            padding-bottom: 18px; /* Increased padding for response heading */
+            font-size: 2.2em; /* Slightly larger response heading */
+            font-weight: bold;
+        }
+        #response-container {
+            margin-top: 30px; /* Increased margin for response container */
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px; /* Increased gap between tables */
+        }
+        .response-table-wrapper {
+            border: 1px solid #80cbc4; /* Light teal border */
+            border-radius: 8px;
+            background-color: #e0f2f1; /* Light teal background */
+            padding: 22px; /* Increased padding for table wrapper */
+            box-shadow: 0 1px 3px rgba(0, 150, 136, 0.05); /* Teal shadow */
+            flex: 1 0 auto;
+            min-width: 380px; /* Increased minimum width for tables */
+        }
+        .response-table {
+            width: 100%;
+            border-collapse: collapse;
+            border-spacing: 0;
+            font-size: 20px; /* Further increased font size for table text */
+        }
+        .response-table th, .response-table td {
+            padding: 14px 18px; /* Increased padding for table cells */
+            border-bottom: 1px solid #b2dfdb; /* Light teal border */
+            text-align: left;
+            word-wrap: break-word;
+        }
+        .response-table th {
+            background-color: #80cbc4; /* Teal header background */
+            font-weight: bold;
+            color: white;
+            white-space: nowrap;
+            font-size: 1.1em; /* Slightly larger header text */
+        }
+        .button-container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Network Route Optimizer</h1>
+
+    <div class="input-group">
+        <label for="filterCountryCode">Filter Country Code:</label>
+        <input type="text" id="filterCountryCode" value="IN">
+    </div>
+
+    <div class="input-group">
+        <label for="filterCurrency">Filter Currency:</label>
+        <input type="text" id="filterCurrency" value="INR">
+    </div>
+
+    <div class="input-group">
+        <label for="timeWeightage">Time Weightage:</label>
+        <input type="text" id="timeWeightage" value="1">
+    </div>
+
+    <div class="input-group">
+        <label for="costWeightage">Cost Weightage:</label>
+        <input type="text" id="costWeightage" value="3">
+    </div>
+
+    <div class="input-group">
+        <label for="failureWeightage">Failure Weightage:</label>
+        <input type="text" id="failureWeightage" value="2">
+    </div>
+
+    <div class="button-container">
+        <button onclick="fetchApiResponse()">Fetch Response</button>
+    </div>
+
+    <h2>API Response:</h2>
+    <div id="response-container">
+        (Response will appear here)
+    </div>
+</div>
+
+<script>
+    function fetchApiResponse() {
+        const filterCountryCode = document.getElementById('filterCountryCode').value;
+        const filterCurrency = document.getElementById('filterCurrency').value;
+        const timeWeightage = document.getElementById('timeWeightage').value;
+        const costWeightage = document.getElementById('costWeightage').value;
+        const failureWeightage = document.getElementById('failureWeightage').value;
+
+        const apiUrl = `http://localhost:8080/partner?filterCountryCode=${encodeURIComponent(filterCountryCode)}&filterCurrency=${encodeURIComponent(filterCurrency)}&timeWeightage=${encodeURIComponent(timeWeightage)}&costWeightage=${encodeURIComponent(costWeightage)}&failureWeightage=${encodeURIComponent(failureWeightage)}`;
+
+        fetch(apiUrl, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            if (response.status === 204 || response.headers.get('content-length') === '0') {
+                return null; // Or return {};
+            }
+            return response.json();
+        })
+        .then(data => {
+            const responseContainer = document.getElementById('response-container');
+            responseContainer.classList.remove('error');
+            responseContainer.innerHTML = ''; // Clear previous content
+
+            if (!data || Object.keys(data).length === 0) {
+                // Handle empty or null response here
+                const messageElement = document.createElement('p');
+                messageElement.textContent = 'No data received from the API.';
+                messageElement.style.color = '#777'; // Muted color for the message
+                messageElement.style.fontStyle = 'italic';
+                messageElement.style.fontSize = '18px'; // Match base font size for message
+                responseContainer.appendChild(messageElement);
+            } else {
+                // Process the data and create the tables as before
+                const keys = Object.keys(data);
+                const itemsPerTable = 5;
+
+                responseContainer.style.display = 'flex';
+                responseContainer.style.flexWrap = 'wrap';
+                responseContainer.style.gap = '25px'; /* Increased gap in JS as well for consistency */
+
+                for (let i = 0; i < keys.length; i += itemsPerTable) {
+                    const wrapper = document.createElement('div');
+                    wrapper.classList.add('response-table-wrapper');
+                    const table = document.createElement('table');
+                    table.classList.add('response-table');
+                    const thead = document.createElement('thead');
+                    const headerRow = document.createElement('tr');
+                    const tbody = document.createElement('tbody');
+                    const dataRow = document.createElement('tr');
+
+                    for (let j = i; j < Math.min(i + itemsPerTable, keys.length); j++) {
+                        const key = keys[j];
+                        const value = data[key];
+
+                        // Table Header
+                        const th = document.createElement('th');
+                        const spacedKey = key.replace(/([A-Z])/g, ' $1').trim();
+                        th.textContent = spacedKey.charAt(0).toUpperCase() + spacedKey.slice(1);
+                        headerRow.appendChild(th);
+
+                        // Table Data
+                        const td = document.createElement('td');
+                        td.textContent = escapeHtml(typeof value !== 'string' ? String(value) : value);
+                        dataRow.appendChild(td);
+                    }
+
+                    thead.appendChild(headerRow);
+                    tbody.appendChild(dataRow);
+                    table.appendChild(thead);
+                    table.appendChild(tbody);
+                    wrapper.appendChild(table);
+                    responseContainer.appendChild(wrapper);
+                }
+            }
+        })
+        .catch(error => {
+            const responseContainer = document.getElementById('response-container');
+            responseContainer.classList.add('error');
+            responseContainer.textContent = `Error fetching API: ${error}`;
+        });
+    }
+
+    function escapeHtml(unsafe) {
+        return String(unsafe)
+             .replace(/&/g, "&amp;")
+             .replace(/</g, "&lt;")
+             .replace(/>/g, "&gt;")
+             .replace(/"/g, "&quot;")
+             .replace(/'/g, "&#039;");
+     }
+</script>
